@@ -6,10 +6,10 @@ import {
   ICON_BUTTON_VARIANT_OPTIONS,
   IconButton as IconButtonComponent,
 } from "src/components";
-import { ArrowLeft } from "src/icons";
+import { ArrowLeftIcon } from "src/icons";
 
 const MyButtonMeta: Meta<typeof IconButtonComponent> = {
-  title: "IconButton",
+  title: "Buttons/IconButton",
   component: IconButtonComponent,
 
   argTypes: {
@@ -57,7 +57,15 @@ const MyButtonMeta: Meta<typeof IconButtonComponent> = {
 export const IconButton: StoryObj<typeof IconButtonComponent> = {
   args: {
     ...MyButtonMeta.args,
-    children: <ArrowLeft />,
+    children: <ArrowLeftIcon />,
+  },
+};
+export const IconButtonOutlined: StoryObj<typeof IconButtonComponent> = {
+  args: {
+    ...MyButtonMeta.args,
+    variant: "outline",
+    children: <ArrowLeftIcon />,
+    color: "primary",
   },
 };
 
