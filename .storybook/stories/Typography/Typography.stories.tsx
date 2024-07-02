@@ -1,10 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { View } from "react-native";
-
+import type { Meta, StoryObj } from "@storybook/react";
 import { Typography as TypographyComponent } from "src/components";
-import { typography, getColorKeys } from "src/theme";
 
-const COLOR_OPTIONS = getColorKeys();
+import { COLOR_OPTIONS, TYPOGRAPHY_VARIANTS } from ".storybook/constants";
 
 const TypographyMeta: Meta<typeof TypographyComponent> = {
   title: "Typography",
@@ -18,7 +16,7 @@ const TypographyMeta: Meta<typeof TypographyComponent> = {
 
   argTypes: {
     variant: {
-      options: Object.keys(typography),
+      options: TYPOGRAPHY_VARIANTS,
       control: { type: "select" },
     },
     color: {
@@ -43,10 +41,25 @@ const TypographyMeta: Meta<typeof TypographyComponent> = {
   ],
 };
 
+export const Typography: StoryObj<typeof TypographyComponent> = {
+  args: {
+    ...TypographyMeta.args,
+    variant: "body2",
+    children:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ab error alias, et earum at! Labore ex, porro harum debitis quae maxime delectus voluptas incidunt aut dignissimos perferendis. Quibusdam, ullam.",
+  },
+};
+
 export const Title1: StoryObj<typeof TypographyComponent> = {
   args: {
     ...TypographyMeta.args,
     variant: "title1",
+  },
+};
+export const Title2: StoryObj<typeof TypographyComponent> = {
+  args: {
+    ...TypographyMeta.args,
+    variant: "title2",
   },
 };
 
