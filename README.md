@@ -1,78 +1,79 @@
-<p align="center">
-  <a href="https://www.chromatic.com/">
-    <img alt="Chromatic" src="https://avatars2.githubusercontent.com/u/24584319?s=200&v=4" width="60" />
-  </a>
-</p>
+This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-<h1 align="center">
-  Chromatic's Intro to Storybook React Native template
-</h1>
+# Getting Started
 
-This template ships with the main React Native and Storybook configuration files you'll need to get up and running fast.
+>**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-## 🚅 Quick start
+## Step 1: Start the Metro Server
 
-1.  **Create the application.**
+First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
-    Use [degit](https://github.com/Rich-Harris/degit) to get this template.
+To start Metro, run the following command from the _root_ of your React Native project:
 
-    ```shell
-    # Clone the template
-    npx degit chromaui/intro-storybook-react-native-template#main taskbox
-    ```
+```bash
+# using npm
+npm start
 
-1.  **Install the dependencies.**
+# OR using Yarn
+yarn start
+```
 
-    Navigate into your new site’s directory and install the necessary dependencies.
+## Step 2: Start your Application
 
-    ```shell
-    # Navigate to the directory
-    cd taskbox/
+Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
 
-    # Install the dependencies
-    yarn
-    ```
+### For Android
 
-1.  **Open the source code and start editing!**
+```bash
+# using npm
+npm run android
 
-    Open the `taskbox` directory in your code editor of choice and building your first component!
+# OR using Yarn
+yarn android
+```
 
-1.  **Browse your stories!**
+### For iOS
 
-    Run `yarn storybook:ios` for ios or `yarn storybook:android` for android to see your component's stories on your emulator or device.
+```bash
+# using npm
+npm run ios
 
-## 🔎 What's inside?
+# OR using Yarn
+yarn ios
+```
 
-A quick look at the top-level files and directories included with this template.
+If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
-    .
-    ├── .gitignore
-    ├── LICENSE
-    ├── README.md
-    ├── App.jsx
-    ├── app.config.js
-    ├── yarn.lock
-    ├── package.json
-    ├── babel.config.js
+This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
-1.  **`.gitignore`**: This file tells git which files it should not track or maintain during the development process of your project.
+## Step 3: Modifying your App
 
-2.  **`LICENSE`**: The template is licensed under the MIT licence.
+Now that you have successfully run the app, let's modify it.
 
-3.  **`README.md`**: A text file containing useful reference information about the project.
+1. Open `App.tsx` in your text editor of choice and edit some lines.
+2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
 
-4. **`App.jsx`**: This is the entry point of your app.  
+   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
 
-5. **`app.config.js`**: This is the configuration file for Expo that allows you to customize your app.
+## Congratulations! :tada:
 
-6. **`yarn.lock`**: This is an automatically generated file based on the exact versions of your npm dependencies that were installed.
+You've successfully run and modified your React Native App. :partying_face:
 
-## Contribute
+### Now what?
 
-If you encounter an issue with the template, we encourage you to open an issue in this template's repository.
+- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
+- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
 
-## Learning Storybook
+# Troubleshooting
 
-1. Read our introductory tutorial at [Learn Storybook](https://storybook.js.org/tutorials/intro-to-storybook/react-native/en/get-started/).
-2. Learn how to transform your component libraries into design systems in our [Design Systems for Developers](https://storybook.js.org/tutorials/design-systems-for-developers/) tutorial.
-3. See our official documentation at [Storybook](https://storybook.js.org/).
+If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+
+# Learn More
+
+To learn more about React Native, take a look at the following resources:
+
+- [React Native Website](https://reactnative.dev) - learn more about React Native.
+- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
+- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
+- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
+- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.

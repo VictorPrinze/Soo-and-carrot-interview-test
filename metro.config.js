@@ -1,14 +1,15 @@
-const path = require("path");
-const { getDefaultConfig } = require("expo/metro-config");
-const { generate } = require("@storybook/react-native/scripts/generate");
+const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
 
-generate({
-  configPath: path.resolve(__dirname, "./.storybook"),
-  useJs: true,
-});
+/**
+ * Metro configuration
+ * https://reactnative.dev/docs/metro
+ *
+ * @type {import('metro-config').MetroConfig}
+ */
+const config = {
+    transformer: {
+        unstable_allowRequireContext: true,
+    },
+};
 
-const defaultConfig = getDefaultConfig(__dirname);
-
-defaultConfig.transformer.unstable_allowRequireContext = true;
-
-module.exports = defaultConfig;
+module.exports = mergeConfig(getDefaultConfig(__dirname), config);
